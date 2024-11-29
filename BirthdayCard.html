@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Happy Bithday Card | </title>
+	<style>
+		body{
+			background-color: whitesmoke;
+		}
+		.body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 10px;
+		}
+		.BirthdayCard{
+			border-radius: 30px;
+			position: relative;
+			width: 420px;
+			height: 500px;
+			transform-style: preserve-3d;
+			cursor: pointer;
+			transform: perspective(2000px);
+			transition: 1s;
+		}
+		.cardFront{
+			position: relative;
+			background-color: #f4c0b5;
+			width: 420px;
+			height: 600px;
+			border-radius: 0 15px 15px 0;
+			overflow: hidden;
+			transform-origin: left;
+			box-shadow: inset 100px 20px 100px rgba(118, 118, 118, 0.2) 30px 0 50px rgba(118, 118, 118, 0.2);
+			transition: 0.6s;
+		}
+		.bdHat{
+			width: 80px;
+			height: auto;
+			top: 6%;
+			left: 13%;
+			transform: rotate(-30deg);
+			position: absolute;
+			z-index: 4;
+		}
+		.balloons{
+			position: absolute;
+			width: 270px;
+			height: auto;
+			right: -10px;
+			top: 30px;
+		}
+		.josephImage{
+			display: flex;
+			justify-content: center;
+			top: 2%;
+			left: -12%;
+			position: absolute;
+			width: 300px;
+			height: auto;
+			z-index: 1;
+		}
+		.happy{
+			text-align: center;
+			left: 15%;
+			top: 84%;
+			font-size: 1.5em;
+			font-family: Tahoma, sans-serif;
+			color: brown;
+			position: absolute;
+			transition: 0.1s;
+			z-index: 6;
+		}
+		.cardInside{
+			position: absolute;
+			background-color: #f4c0b5;
+			width: 420px;
+			height: 600px;
+			z-index: -1;
+			left: 0;
+			border-radius: 0 15px 15px 0;
+			top: 0;
+			box-shadow: inset 100px 20px 100px rgba(191, 190, 190, 0.2);
+		}
+		p{
+			line-height: 30px;
+			margin:15px 10px 10px 30px;
+			color: #333;
+		}
+		.back{
+			font-family: Tahoma, sans-serif;
+			color: #333;
+			text-align: center;
+			margin: 30px;
+		}
+		.BirthdayCard:hover{
+			transform: perspective(2500px) rotate(5deg);
+			box-shadow: inset 100px 20px 100px rgba(116, 115, 115, 0.5) 0 10px 100px rgba(116, 115, 115, 0.5);
+		}
+		.BirthdayCard:hover .cardFront{
+			transform: rotateY(-160deg);
+		}
+		.BirthdayCard:hover.happy{
+			visibility: hidden;
+		}
+		.nxtpageBtn {
+    background-image: url("flower_ICON.png"); /* Background image */
+    height: 70px;
+    width: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75px; /* Size of the background image */
+    color: white; /* Text color */
+    padding: 14px 40px; /* Padding around the text */
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer;
+    display: inline-flex; /* Aligns icon and text horizontally */
+    justify-content: center; /* Centers the text */
+    align-items: center; /* Vertically aligns the content */
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a shadow for depth */
+}
+
+/* Hover Effect */
+.nxtpageBtn:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slight transparent white background */
+    transform: translateY(-4px); /* Elevate the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Active (when clicked) Effect */
+.nxtpageBtn:active {
+    transform: translateY(2px); /* Push button down a little */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow on click */
+}
+
+/* Optional: You can add focus effect */
+.nxtpageBtn:focus {
+    outline: none; /* Remove the outline */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.6); /* Blue glow effect when focused */
+}
+audio {
+	display: none;
+}
+
+	</style>
+</head>
+<body>
+	<audio class="song" controls loop>
+        <source src="hbd.mp3"></source>
+	   Your browser isn't invited for super fun audio time.
+    </audio>
+	<div>
+		<button class="nxtpageBtn" onclick="letter()"></button>
+	</div>
+	<div class="body">
+		<div class="BirthdayCard">
+			<div class="cardFront">
+				<img src="https://cdn-icons-png.flaticon.com/512/6917/6917462.png" class="balloons" alt="balloons"/>
+				<img src="https://cdn-icons-png.flaticon.com/512/4392/4392520.png" class="bdHat" alt="bdHat"/>
+				<img src="Shara_img.png" alt="joseph" class="josephImage"/>
+				<h2 class="happy">Happy Birthday SHARA!!</h2>
+			</div>
+			<div class="cardInside">
+				<h3 class="back">HAPPY BIRTHDAY!</h3>
+				<p>Dear Shara</p>
+				<p>From the moment we started talking, I found 
+				   myself liking you more each day, especially
+				   nong nalaman ko na nag lalaro ka ng badminton, 
+				   ang ganda lang panoorin ka habang nag lalaro.
+				   I understand how busy you are with your academics, 
+				   and I respect your space completely. I just want 
+				   you to know that you mean a lot to me, and I’m 
+				   willing to wait for you until you’re ready. You 
+				   truly deserve the best, and I hope you achieve all
+				   your goals in life. On your special day, I just 
+				   want to wish you a very Happy Birthday. May you 
+				   always stay safe and continue to shine in everything 
+				   you do.</p>
+				<p>Joseph ❤️</p>   
+			</div>
+		</div>
+	</div>
+	<script>
+
+      function letter() {
+    window.location.href = 'index.html';
+     
+}
+</script>
+</body>
+</html>
